@@ -14,6 +14,7 @@ const Favoritos = () => {
           <span>Seguir</span>
           <FontAwesomeIcon icon={faArrowRight} />
         </button>
+        <hr />
         <div className="favoritos">
           {user_favorites[0].favorites.map((favorito) => (
             <Favorito favorito={favorito} key={favorito.id} />

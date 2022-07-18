@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 const ItemFavorito = ({ favorito }) => {
   return (
@@ -9,9 +11,16 @@ const ItemFavorito = ({ favorito }) => {
       </div>
       <div className="favoritos-item-details">
         <h6>NAME</h6>
-        <span>Ri Fleece</span>
-        <span>Hoodie</span>
-        <span>$100 $34</span>
+        <p>Ri Fleece</p>
+        <p>Hoodie</p>
+        <p>
+          <span className="line-trough">$100</span> <span>$34</span>
+        </p>
+      </div>
+      <div>
+        <button className="btn btn-danger">
+          <FontAwesomeIcon icon={faTrashCan} fixedWidth />
+        </button>
       </div>
     </div>
   );

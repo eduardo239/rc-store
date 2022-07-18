@@ -1,29 +1,39 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useContext } from 'react';
+import { NavLink } from 'react-router-dom';
+import { UserContext } from '../context/user';
 
 function Menu() {
+  const { user, setUser } = useContext(UserContext);
   return (
-    <ul className="menu">
+    <ul className='menu'>
       <li>
-        <NavLink to="/">Inicio</NavLink>
+        <NavLink to='/'>Inicio</NavLink>
       </li>
       <li>
-        <NavLink to="/entrar">Entrar</NavLink>
+        <NavLink to='/entrar'>Entrar</NavLink>
       </li>
       <li>
-        <NavLink to="/registrar">Registrar</NavLink>
+        <NavLink to='/registrar'>Registrar</NavLink>
       </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to='/perfil'>Perfil {user && user.name}</NavLink>
+          </li>
+
+          <li>
+            <NavLink to='/favoritos'>Favoritos</NavLink>
+          </li>
+
+          <li>
+            <NavLink to='/' onClick={() => setUser(null)}>
+              Sair
+            </NavLink>
+          </li>
+        </>
+      )}
       <li>
-        <NavLink to="/perfil">Perfil</NavLink>
-      </li>
-      <li>
-        <NavLink to="/favoritos">Favoritos</NavLink>
-      </li>
-      <li>
-        <NavLink to="/sair">Sair</NavLink>
-      </li>
-      <li>
-        <NavLink to="/admin/add/item">Add Item</NavLink>
+        <NavLink to='/admin/add/item'>Add Item</NavLink>
       </li>
     </ul>
   );
