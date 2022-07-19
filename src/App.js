@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Menu from './components/Menu';
 import Sair from './pages/Sair';
@@ -10,12 +10,12 @@ import Esqueci from './pages/Esqueci';
 import AddItem from './pages/admin/AddItem';
 import Registrar from './pages/Registrar';
 import Favoritos from './pages/Favoritos';
-import { UserContext } from './context/user';
+import AllItems from './pages/admin/AllItems';
+// import { UserContext } from './context/user';
 
 function App() {
-  const { user } = useContext(UserContext);
+  // const { user } = useContext(UserContext);
 
-  console.log(user);
   return (
     <div className='app'>
       <Menu></Menu>
@@ -29,6 +29,7 @@ function App() {
         <Route exact path='/sair' element={<Sair />} />
         <Route exact path='/esqueci-a-senha' element={<Esqueci />} />
         <Route exact path='/admin/add/item' element={<AddItem />} />
+        <Route exact path='/admin/all/items' element={<AllItems />} />
       </Routes>
     </div>
   );

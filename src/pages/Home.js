@@ -1,11 +1,12 @@
-import React from "react";
-import Card from "../components/Card";
-import items from "../api/items.json";
+import React, { useContext } from 'react';
+import Card from '../components/Card';
+import { ItemContext } from '../context/items';
 
 const Home = () => {
+  const { items } = useContext(ItemContext);
   if (items && items.length > 0)
     return (
-      <div className="flex flex-center flex-wrap gap-9">
+      <div className='flex flex-center flex-wrap gap-9'>
         {items.map((item) => (
           <Card key={item.id} item={item} />
         ))}

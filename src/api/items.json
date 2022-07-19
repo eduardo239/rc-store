@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": "aac7423a-496f-45da-b9e0-8eb4308689fc",
         "name": "Camisa Preta",
         "description": "O Lorem Ipsum é um texto modelo da indústria tipográfica e de impressão. O Lorem Ipsum tem vindo a ser o texto padrão usado por estas indústrias desde o ano de 1500",
         "price": "99.10",
@@ -17,7 +17,7 @@
         "quantity": 10
     },
     {
-        "id": 2,
+        "id": "3bd08e17-aae0-4608-a4fc-bc655f974631",
         "name": "Camisa Azul",
         "description": "É um facto estabelecido de que um leitor é distraído pelo conteúdo legível de uma página",
         "price": "125,00",
@@ -30,5 +30,27 @@
             "Azul"
         ],
         "quantity": 3
+    },
+    {
+        "id": "f0b41b08-b4d0-41b6-834d-0c5e996fdfd3",
+        "name": "Camisa Roxa",
+        "description": "A Version 1 UUID is a universally unique identifier that is generated using a timestamp and the MAC address of the computer on which it was generated.",
+        "price": "99,99",
+        "image": "http://localhost:3000/images/Vector_Tshirt_Vector_Tshirt_p.jpg",
+        "sizes": [
+            "P",
+            "M",
+            "G",
+            "GG"
+
+        ],
+        "colors": [
+            "Azul",
+            "Roxo",
+            "Rosa",
+            "Vermelho",
+            "Preto"
+        ],
+        "quantity": 300
     }
 ]

@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../context/user';
 import { checkPassword } from '../utils';
+import { v4 as uuid } from 'uuid';
 import Message from '../components/Message';
 
 const Registrar = () => {
@@ -9,6 +10,7 @@ const Registrar = () => {
 
   const [error, setError] = React.useState(false);
   const [form, setForm] = React.useState({
+    id: uuid(),
     name: 'qwe',
     email: 'qwe@123.com',
     password: '',

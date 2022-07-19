@@ -9,12 +9,17 @@ function Menu() {
       <li>
         <NavLink to='/'>Inicio</NavLink>
       </li>
-      <li>
-        <NavLink to='/entrar'>Entrar</NavLink>
-      </li>
-      <li>
-        <NavLink to='/registrar'>Registrar</NavLink>
-      </li>
+      {!user && (
+        <>
+          <li>
+            <NavLink to='/entrar'>Entrar</NavLink>
+          </li>
+          <li>
+            <NavLink to='/registrar'>Registrar</NavLink>
+          </li>
+        </>
+      )}
+
       {user && (
         <>
           <li>
@@ -33,7 +38,10 @@ function Menu() {
         </>
       )}
       <li>
-        <NavLink to='/admin/add/item'>Add Item</NavLink>
+        <NavLink to='/admin/add/item'>Adicionar</NavLink>
+      </li>
+      <li>
+        <NavLink to='/admin/all/items'>Todos os Itens</NavLink>
       </li>
     </ul>
   );

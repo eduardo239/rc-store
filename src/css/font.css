@@ -57,3 +57,13 @@ label::after {
 .line-trough {
   text-decoration: line-through;
 }
+
+.truncate {
+  max-width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.truncate p {
+  margin-bottom: 0;
+}

@@ -7,6 +7,8 @@ const UserProvider = UserContext.Provider;
 const ContextUser = ({ children }) => {
   const [user, setUser] = useState(null);
 
+  console.log(user);
+
   return (
     <UserProvider
       value={{
